@@ -5,14 +5,13 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB527hyMfhmS-ZuZAC4s7_rnzz4OjQJbIc",
-  authDomain: "dnnstore-2dfff.firebaseapp.com",
-  databaseURL: "https://dnnstore-2dfff-default-rtdb.firebaseio.com",
-  projectId: "dnnstore-2dfff",
-  storageBucket: "dnnstore-2dfff.appspot.com",
-  messagingSenderId: "63667204007",
-  appId: "1:63667204007:web:b03d490eb966a6073d1082",
-  measurementId: "G-GTM4H1SW6W"
+  apiKey: "AIzaSyChttGsCdO0bjxbqnksLXYgYx6N8L7dzQY",
+  authDomain: "dnn-project-82042.firebaseapp.com",
+  projectId: "dnn-project-82042",
+  storageBucket: "dnn-project-82042.appspot.com",
+  messagingSenderId: "75766107776",
+  appId: "1:75766107776:web:8dc0d0ebb013ed2f6b6065",
+  measurementId: "G-4SVN96318B"
 };
 
 // Initialize Firebase
