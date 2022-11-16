@@ -44,7 +44,7 @@ function App() {
           }).catch ((error) => {
             // An error happened.
           }); 
-        }}>Sing out</button>
+        }}>Sign out</button>
         </div>}
       
     </div>
