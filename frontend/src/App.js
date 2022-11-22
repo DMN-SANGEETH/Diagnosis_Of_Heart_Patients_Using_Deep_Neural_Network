@@ -37,6 +37,7 @@ function App() {
       {!isuser&&(<Login />)}
       
       {isuser&&<div><SignUp_Patients/>
+      <div className="btn">
         <button className="btn-signout" onClick={()=>{
           signOut(auth).then(() => {
             // Sign-out successful.
@@ -45,6 +46,7 @@ function App() {
             // An error happened.
           }); 
         }}>Sign out</button>
+        </div>
         </div>}
       
     </div>

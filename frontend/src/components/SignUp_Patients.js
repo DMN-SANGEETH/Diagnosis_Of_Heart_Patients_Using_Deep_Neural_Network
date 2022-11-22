@@ -42,14 +42,17 @@ export default function App() {
 
   return (
     <div className="demo">
+
       <div className="w3-panel1">
         {
           url &&
           <img src={url} className="demo1" />
         }
       </div>
+      <div className="text">
       <div className="demo2">
         <input type="file" className="demo2_1" onChange={handler1}  />
+        
         <div className="demo2_2">
         <button  onClick={handler2} type="submit">send</button>
         </div>
@@ -60,6 +63,8 @@ export default function App() {
         {confidence && <div>Confidence:{confidence}</div>}
       </div>
       </div>
+      
+    </div>
   
   )
 }
