@@ -26,46 +26,43 @@ const Login = () => {
     // console.log(username);
     // console.log(password);
     return (
-    <div>
-        <div>       
+    <div className='container'>              
         {/* <BlogImage>
             <img src='./img/images02.jpeg' alt='blogimage' />
         </BlogImage> */}
-        <div className='back'>
-        <div className="container">
-                <div className="screen">
-                    <div className="screen__content">
-                    
-                        <div className="login">
-                        <img src='./img/download1.png' alt= "logimag"/>
-                        <input className="login__input" type='text' placeholder='username' value={username} 
-                onChange={e=>{
-                    e.preventDefault();
-                    setUsername(e.target.value);
-                }}/> 
-                <br/>
-                <input className="login__input" type='password' placeholder="password" value={password}
-                onChange={e=>{
-                    e.preventDefault();
-                    setPassword(e.target.value);
-                }}/>
-                <br/>
-                <button onClick={userSignin} className="button login__submit"
-                ><div style={{align:'center',margin:'auto'}}>Log in</div></button>
-                <br/>
-                < a href='/' className="button__text" style={{textDecoration:'none',color:'ButtonHighlight'}}>forget password</a>
-
-                        </div>
-
-                    </div>
-                   
+            <div className="screen__content">
+            
+                <div className="content_1">
+                    <img src='./img/70bm.gif' alt= "logimag"/>
                 </div>
 
-            </div>
+                <div className='content_2'>
+                    <label>Enter username  :</label><br/>
+                    <input className="login__input" type='text' placeholder='username' value={username} 
+                    onChange={e=>{
+                        e.preventDefault();
+                        setUsername(e.target.value);
+                    }}/> 
+                    <br/><br/>
+                    <label>Enter password :</label><br/>
+                    <input className="login__input" type='password' placeholder="password" value={password}
+                    onChange={e=>{
+                        e.preventDefault();
+                        setPassword(e.target.value);
+                    }}/>
+                    <br/><br/>
 
-        </div>
+                    <button onClick={userSignin} className="button login__submit">
+                        <div style={{align:'center',margin:'auto'}}>Log in</div>
+                    </button>
+                    <br/>
+                    
+                    <a a href='/' className='forgetpw' style={{textDecoration:'none',color:'ButtonHighlight'}}>forget password</a>
+                    
+                </div>
             
-        </div>       
+            </div>
+                   
     </div>
 );
 }

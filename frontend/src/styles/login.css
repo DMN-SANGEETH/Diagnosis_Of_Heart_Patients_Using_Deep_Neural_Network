@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
 }
 
-.screen {
+/* .screen {
   background: linear-gradient(90deg, #635ba3, #7c78b8);
   position: relative;
   height: 600px;
@@ -194,4 +194,35 @@ body {
 
 .social-login__icon:hover {
   transform: scale(1.5);
+} */
+
+.screen__content{
+  display: flex;
+  box-sizing: border-box;
+  border: 3px solid rgb(54, 116, 87);
+  border-radius: 10px;
+  padding-right: 1rem;
+  
 }
+
+.content_2{
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.content_2 > input{
+  width: 18rem;
+  height: 30px;
+  
+}
+
+.content_2 > button{
+  display: grid;
+  justify-content: center;
+  padding: 10px 15px 10px 15px;
+  font-size: 15px;
+  font-weight: 550;
+}
+
