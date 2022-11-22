@@ -1,5 +1,7 @@
 import { async } from "@firebase/util";
 import { useState } from "react"
+import "../styles/SignUp_Patients.css";
+
 // import { storage } from "./db";
 // import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
@@ -39,23 +41,25 @@ export default function App() {
 
 
   return (
-    <>
-      <div className="w3-panel">
+    <div className="demo">
+      <div className="w3-panel1">
         {
           url &&
-          <img src={url} className="w3-image" />
+          <img src={url} className="demo1" />
         }
       </div>
-      <div className="w3-panel">
-        <input type="file" onChange={handler1} className="w3-input" />
-        <button className="w3-button" onClick={handler2} type="submit">send</button>
+      <div className="demo2">
+        <input type="file" className="demo2_1" onChange={handler1}  />
+        <div className="demo2_2">
+        <button  onClick={handler2} type="submit">send</button>
+        </div>
       </div>
 
-      <div className="w3-panel">
+      <div className="demo3">
         {predicted_class && <div>Predicted:{predicted_class}</div>}
         {confidence && <div>Confidence:{confidence}</div>}
       </div>
-
-    </>
+      </div>
+  
   )
 }

@@ -5,7 +5,7 @@ import App from './App';
 import Login from './components/Login';
 import reportWebVitals from './reportWebVitals';
 import SignUp_Patients from './components/SignUp_Patients'
-
+import SignUp_Docter from './components/SignUp_Docter'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
