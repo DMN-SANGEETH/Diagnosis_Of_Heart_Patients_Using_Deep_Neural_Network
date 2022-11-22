@@ -37,7 +37,7 @@ function App() {
       {!isuser&&(<Login />)}
       
       {isuser&&<div><SignUp_Patients/>
-        <button onClick={()=>{
+        <button className="btn-signout" onClick={()=>{
           signOut(auth).then(() => {
             // Sign-out successful.
             alert ('User is sign out!'); 
