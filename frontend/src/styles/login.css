@@ -14,7 +14,8 @@
 }
 
 body {
-  background: linear-gradient(90deg, #c7c5f4, #776bcc);
+  /* background-image: "Yellow And Black Rosa Maria Banner YouTube Channel Art.png"; */
+  background: linear-gradient(90deg, #b5eec2, #3ddf84);
 }
 
 .back {
@@ -202,6 +203,8 @@ body {
   border: 3px solid rgb(54, 116, 87);
   border-radius: 10px;
   padding-right: 1rem;
+  background-color: #09af51;
+  
   
 }
 
@@ -224,5 +227,13 @@ body {
   padding: 10px 15px 10px 15px;
   font-size: 15px;
   font-weight: 550;
+}
+
+.patientsreg{
+  padding-left: 10rem;
+  color: rgb(55, 6, 233);
+  font-weight: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
 }
 

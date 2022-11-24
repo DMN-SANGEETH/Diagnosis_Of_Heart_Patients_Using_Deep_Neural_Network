@@ -2,7 +2,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import auth from "./components/firebase/firebase";
 import Login from "./components/Login";
-import SignUp_Docter from "./components/SignUp_Docter";
+// import SignUp_Docter from "./components/SignUp_Docter";
 import SignUp_Patients from './components/SignUp_Patients'
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
 
   return (
     <div>
+
       {!isuser&&(<Login />)}
       
       {isuser&&<div><SignUp_Patients/>
