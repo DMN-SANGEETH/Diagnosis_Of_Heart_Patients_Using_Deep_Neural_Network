@@ -50,14 +50,19 @@ def read_file_as_image(data) -> np.ndarray:
 @app.post("/predict")
 async def predict(
     file: UploadFile = File(...)):
-    image = read_file_as_image(await file.read())
+    img = await file.read()
+    image = read_file_as_image(img)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     blur = cv2.GaussianBlur(gray, (0,0), sigmaX=33, sigmaY=33)
     divide = cv2.divide(gray, blur, scale=255)
     thresh = cv2.threshold(divide, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)[1]
-    # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3,3))
-    # morph = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
-    test_img=cv2.resize(thresh,(224,224))
+    width = int(thresh.shape[1]*68/100)
+    height = int(thresh.shape[0]*51/100)
+    dsize = (width, height)
+    output = cv2.resize(thresh,dsize)
+    #img=cv2.imread(output)
+    cropped_image = output[150:760, 60:1460] # Slicing to crop the image
+    test_img=cv2.resize(cropped_image,(224,224))
     test_img=test_img/255
     test_img=test_img.reshape(1,224,224,1)   
 
@@ -67,21 +72,6 @@ async def predict(
     predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
     confidence1 = np.argmax(predictions[0])
     return {"predicted_class":predicted_class,"confidence":float(confidence1)}
-    
-    
-    # return {
-
-    #     "prdiction :":predicted_class,
-    #     "conpidensleval :": confidence
-    # }
-    
-    #return templates.TemplateResponse("predict.html", {"request": request, "predicted_class": predicted_class, "confidence":confidence})
-
-# @app.post("/predict_2", response_class=HTMLResponse)
-# async def predict(request: Request
-# ):
-
-#     return 
     
 if __name__ == "__main__":
     uvicorn.run(app, host='localhost', port=8000)
