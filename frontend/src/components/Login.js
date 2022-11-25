@@ -3,12 +3,12 @@ import { useState } from 'react';
 // import styled from 'styled-components';
 import auth from './firebase/firebase';
 import "../styles/login.css";
-import { BrowserRouter as Router,
-        Routes,
-        Route,
-        Link,
- } from 'react-router-dom';
-import Patientsreg from './Patientsreg';
+// import { BrowserRouter as Router,
+//         Routes,
+//         Route,
+//         Link,
+//  } from 'react-router-dom';
+
 
 
 const Login = () => {
@@ -33,7 +33,7 @@ const Login = () => {
     // console.log(username);
     // console.log(password);
     return (
-        <Router>
+        
         <div className='container' >              
         {/* <BlogImage>
             <img src='./img/images02.jpeg' alt='blogimage' />
@@ -45,6 +45,7 @@ const Login = () => {
                 </div>
 
                 <div className='content_2'>
+                    <h2>User LogIn</h2>
                     <label>Enter username  :</label><br/>
                     <input className="login__input" type='text' placeholder='UserName' value={username} 
                     onChange={e=>{
@@ -64,7 +65,7 @@ const Login = () => {
                         <div style={{align:'center',margin:'auto'}}>Log in</div>
                     </button>
                     <br/>
-                    <li><Link to="/Patientsreg">React</Link></li>
+                    {/* <li><Link to="/Patientsreg">React</Link></li> */}
                     {/* <a href="/Patientsreg" className='patientsreg' >Sign-up</a> */}
 
                     {/* <a a href='/' className='forgetpw' style={{textDecoration:'none',color:'ButtonHighlight'}}>forget password</a> */}
@@ -75,14 +76,8 @@ const Login = () => {
                    
         </div>
 
-        <div>
-
-            <Routes>
-            <Route path="/Patientsreg" element={<Patientsreg/>}/>            
-            </Routes>
-
-        </div>
-        </Router>
+        
+        
 );
 }
 export default Login;

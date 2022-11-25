@@ -33,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 78vh;
 }
 
 /* .screen {
@@ -210,7 +210,7 @@ body {
 
 .content_2{
   margin-left: 2rem;
-  margin-top: 1rem;
+  margin-top: 10px;
   font-weight: 800;
   font-size: 20px;
 }
@@ -229,6 +229,12 @@ body {
   font-weight: 550;
 }
 
+.content_2 > h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 3rem;
+  margin-bottom: 10px;
+  color: antiquewhite;
+}
 .patientsreg{
   padding-left: 10rem;
   color: rgb(55, 6, 233);

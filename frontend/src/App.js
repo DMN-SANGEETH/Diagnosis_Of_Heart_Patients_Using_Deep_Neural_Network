@@ -2,8 +2,11 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import auth from "./components/firebase/firebase";
 import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import Footbar from "./components/Footbar";
 // import SignUp_Docter from "./components/SignUp_Docter";
-import SignUp_Patients from './components/SignUp_Patients'
+import SignUp_Patients from './components/SignUp_Patients';
+import Patientsreg from './components/Patientsreg';
 
 function App() {
   const [isuser,setIsuser] = useState(false);
@@ -34,7 +37,7 @@ function App() {
 
   return (
     <div>
-
+      <Navbar/>
       {!isuser&&(<Login />)}
       
       {isuser&&<div><SignUp_Patients/>
@@ -49,7 +52,9 @@ function App() {
         }}>Sign out</button>
         </div>
         </div>}
-      
+
+        
+      {/* <Footbar/> */}
     </div>
   );
 }
