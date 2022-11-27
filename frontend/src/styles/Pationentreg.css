@@ -21,13 +21,17 @@ body {
   }
   
   .main{
-    font-size: 25px;
-    margin: 0;
+    font-size: 22px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
-    border: 3px solid chartreuse;
+    /* border: 3px solid chartreuse; */
     border-radius: 10px;
     display: grid;
-    /* justify-content: center; */
+    justify-content: center;
+    padding: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
   }
   
@@ -39,10 +43,21 @@ body {
   
   .fields > input{
     font-size: 20px;
+    width: 20rem;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: inset;
   }
   
   .fields > button{
     font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: inset;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: burlywood;
     /* 
     
     margin: 0px 20px 20px 0px; */
@@ -50,6 +65,9 @@ body {
 
   .img{
     width: 10px;
+    justify-content: center;
+    padding-left: 100px;
+    
     
   }
-  
+

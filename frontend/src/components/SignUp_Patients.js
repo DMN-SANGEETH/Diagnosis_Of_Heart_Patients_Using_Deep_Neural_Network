@@ -69,7 +69,7 @@ export default function App() {
       </div>
       <div className="text">
       <div className="demo2">
-        <input type="file" className="demo2_1" onChange={handler1}  />
+        <input type="file" className="demo2_1" onChange={handler1} />
         
         <div className="demo2_2">
         <button  onClick={handler2} type="submit">send</button>
