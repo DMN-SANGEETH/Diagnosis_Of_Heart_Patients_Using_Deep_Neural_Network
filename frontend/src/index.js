@@ -6,12 +6,14 @@ import Login from './components/Login';
 import reportWebVitals from './reportWebVitals';
 import SignUp_Patients from './components/SignUp_Patients'
 import SignUp_Docter from './components/SignUp_Docter'
+import Navbar from './components/Navbar';
+import Footer from "./components/Footbar"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
+    <Navbar />
     <App/>
-    
+    {/* <Footer /> */}
   </React.StrictMode>
 );
 

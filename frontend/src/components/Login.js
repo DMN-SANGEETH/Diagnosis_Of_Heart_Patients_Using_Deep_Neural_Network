@@ -2,6 +2,8 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 // import styled from 'styled-components';
 import auth from './firebase/firebase';
+import {SignJWT} from "jose"
+import Cookies from 'js-cookie'
 import "../styles/login.css";
 // import { BrowserRouter as Router,
 //         Routes,
@@ -17,12 +19,20 @@ const Login = () => {
 
     const userSignin = ()=>{
         signInWithEmailAndPassword(auth, username, password)
-        .then((userCredential) => {
+        .then(async(userCredential) => {
         // Signed in 
-        // const user = userCredential.user;
-        // // ...
-        // console.log(user);
-        console.log('User sign ind');
+        const user = userCredential.user;
+        console.log(user)
+
+        // // Create jwt 
+        const jwt  = await new SignJWT({user:user.uid,email:user.email})
+            .setProtectedHeader({alg:'HS256',typ:'JWT'})
+            .setExpirationTime('1h')
+            .sign(new TextEncoder().encode('Hello-World'))
+        
+        // save cookie 
+        Cookies.set('jwt',jwt)
+        window.location.href = '/signup-patient'
         })
         .catch((error) => {
         //const errorCode = error.code;
@@ -54,11 +64,11 @@ const Login = () => {
                     }}/> 
                     <br/><br/>
                     <label>Enter password :</label><br/>
-                    <input className="login__input" type='password' placeholder="password" value={password}
+                    <input  className="login__input" type='password' placeholder="password" value={password}
                     onChange={e=>{
                         e.preventDefault();
                         setPassword(e.target.value);
-                    }}/>
+                    }} />
                     <br/><br/>
 
                     <button onClick={userSignin} className="button login__submit">
@@ -80,5 +90,6 @@ const Login = () => {
         
 );
 }
+
 export default Login;
 
