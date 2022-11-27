@@ -56,10 +56,15 @@ body{
     background-color: rgb(5, 103, 23);
     height: 100px;
     width: 100%;
+     position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
 }
 
 .f01{
     display: flex;
+   
 }
 
 .f02{

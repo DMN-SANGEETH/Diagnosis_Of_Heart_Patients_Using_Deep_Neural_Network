@@ -1,34 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Nav } from 'react-bootstrap'
 import '../styles/Navbar.css'
-import { BrowserRouter as Router,
-        Routes,
-        Route
-         } from 'react-router-dom'
-import Login from './Login'
-import Patientsreg from './Patientsreg'
-
+import { jwtVerify } from 'jose';
+import Cookies from 'js-cookie';
+import { useEffect } from 'react';
 
 export default function Navbar() {
+    const [auth,setAuth] = useState(false)
+    const [email,setemail] = useState(null)
+    const verify = async(tkn)=>{
+        try {
+         const {payload} = await jwtVerify(tkn,new TextEncoder().encode('Hello-World'))
+         console.log(payload);
+         setAuth(true)
+        setemail(payload.email)
+
+        } catch (error) {
+         console.log({error:error.message});
+        }
+     }
+    
+     useEffect(()=>{
+         const jwt = Cookies.get('jwt')
+         verify(jwt)
+     },[])
     
   return (
     <div>
-        <Router>
         <Nav className="nav">
             <label className='logo'>Heart-Care</label>
             <ul>
-                <li><a className='active' href= "/LogIn">Log-In</a></li>
-                <li><a className='active' href= "/PatientsReg">Sign-up</a></li>
+                {auth && <li><a className='active' href= "#">{email}</a></li>}
+                {!auth && <li><a className='active' href= "/LogIn">Log-In</a></li>}
+                {auth && <li><a className='active' href= "/Logout">Log-Out</a></li>}
+                
+                <li><a className='active' href= "/signup">Sign-up</a></li>
             </ul>
             
         </Nav>
-        <div>
-            <Routes>
-                <Route path='/LogIn' element={<Login/>}/>
-                <Route path='/PatientsReg' element={<Patientsreg/>}/>
-            </Routes>
-        </div>
-        </Router>
     </div>
   )
 }

@@ -1,5 +1,7 @@
 import { async } from "@firebase/util";
-import { useState } from "react"
+import { useState,useEffect } from "react"
+import { jwtVerify } from "jose";
+import Cookies from "js-cookie";
 import "../styles/SignUp_Patients.css";
 
 // import { storage } from "./db";
@@ -11,6 +13,22 @@ export default function App() {
   const [img,setImg] = useState('')
   const [predicted_class,set_predicted_class] = useState(null)
   const [confidence,set_confidence] = useState(null)
+
+
+  const verify = async(tkn)=>{
+    try {
+     const {payload} = await jwtVerify(tkn,new TextEncoder().encode('Hello-World'))
+     console.log(payload);
+    } catch (error) {
+     console.log({error:error.message});
+     window.location.href = '/login'
+    }
+ }
+
+ useEffect(()=>{
+     const jwt = Cookies.get('jwt')
+     verify(jwt)
+ },[])
 
   const handler1 = (event) => {
     const file = event.target.files[0];
