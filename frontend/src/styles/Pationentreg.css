@@ -69,3 +69,67 @@ body {
     
   }
  */
+
+ #main{
+  text-align: center;
+  width: 30rem;
+  height: auto;
+  margin: 5rem 30rem 5rem 30rem;
+  justify-content: center;
+  display: flex;
+  /* padding: 90px 0px 90px 0px; */
+  /* background-color:rgba(148, 214, 171, 0.612); */
+ }
+
+ #sub-main{
+  border: 3px solid chocolate;
+  border-radius: 25px;
+  background-color: rgb(67, 179, 95);
+  
+  
+ }
+
+
+
+#imag{
+  padding-top: 5px;
+  justify-content: center;
+  display: grid;
+}
+
+/* #sub-imag{
+  background-color: rgb(63, 69, 66);
+  border-radius: 120px;
+  align-items: center;
+  display: grid;
+  height: 115px;
+  width: 115px;
+
+
+} */
+
+.profile{
+  height: 100px;
+  width: 100px;
+  border-radius: 130px;
+}
+
+#fields{
+  margin: 40px 0px;
+  /* display: grid; */
+  /* align-items:left; */
+}
+
+#lble{
+  font-size: 20px;
+
+}
+
+#fields > input{
+  width: 17rem;
+  border-radius: 25px;
+}
+
+button{
+  padding: 8px;
+}

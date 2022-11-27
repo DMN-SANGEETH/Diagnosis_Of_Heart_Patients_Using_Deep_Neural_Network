@@ -22,29 +22,28 @@ export default function App(){
 
   return (
     <div  id="main">
-      <div id="sub-main" className="w3-padding-64 w3-panel">
+      <div id="sub-main" >
 
         
         <div id="imag">
 
             <img src="./img/AAAA.png" alt= "profile" className="w3-image profile"  />
 
-       </div>
+        </div>
 
-      <div className="fields" id="fields">
-        <label>Enter Your Name :</label><br/>
-        <input  placeholder="First Name"/><br/>
-        <label>Enter Email address :</label><br/>
-        <input ref={ emailRef } placeholder="Email"/><br/>
-        <label>Enter Passworad :</label><br/>
-        <input ref={ passwardRef } type="password" placeholder="Passworad"/><br/>
-        <label>Gender :</label>
-        <select defaultValue="Select Gender">
-            <option defaultValue>Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select><br />
 
+        <div id="fields" >
+
+          <label id = "lble">User Email</label><br/>
+          <input ref={ emailRef } placeholder="Email"  /><br/>
+          <label id = "lble">User passward</label><br/>
+          <input ref={ passwardRef } type="passward" placeholder="Passwarad" /><br/>
+          <label id = "lble">User Name</label><br/>
+          <input placeholder="User name" /><br/>
+          <label id = "lble">User Contact</label><br/>
+          <input placeholder="Contact Number" />
+          <br/><br/>
+          <button disabled={loading} onClick={handlesignup}  >signup</button>
         </div>
 
 
