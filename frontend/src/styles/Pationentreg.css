@@ -1,4 +1,4 @@
-*{
+/* *{
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -26,7 +26,7 @@ body {
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    /* border: 3px solid chartreuse; */
+    border: 3px solid chartreuse;
     border-radius: 10px;
     display: grid;
     justify-content: center;
@@ -58,11 +58,9 @@ body {
     padding-right: 2rem;
     color: rgb(255, 255, 255);
     background-color: burlywood;
-    /* 
     
-    margin: 0px 20px 20px 0px; */
+    margin: 0px 20px 20px 0px;
   }
-
   .img{
     width: 10px;
     justify-content: center;
@@ -70,4 +68,4 @@ body {
     
     
   }
-
+ */

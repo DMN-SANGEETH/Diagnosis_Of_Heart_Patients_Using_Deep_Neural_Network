@@ -37,7 +37,7 @@ export default function App(){
         <label>Enter Email address :</label><br/>
         <input ref={ emailRef } placeholder="Email"/><br/>
         <label>Enter Passworad :</label><br/>
-        <input ref={ passwordRef } type="password" placeholder="Passworad"/><br/>
+        <input ref={ passwardRef } type="password" placeholder="Passworad"/><br/>
         <label>Gender :</label>
         <select defaultValue="Select Gender">
             <option defaultValue>Select Gender</option>
