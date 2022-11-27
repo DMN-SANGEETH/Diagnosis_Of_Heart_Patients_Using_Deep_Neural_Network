@@ -2,47 +2,53 @@ import { useRef, useState } from "react";
 import { async } from "@firebase/util";
 import { signup } from "./firebase/firebase";
 import '../styles/Pationentreg.css';
+// import Profile from "./img/AAAA.png";
 
 export default function App(){
   const [ loading, setLoading ] = useState(false);
   const emailRef =useRef();
-  const passwordRef =useRef();
+  const passwardRef =useRef();
 
   async function handlesignup(){
     setLoading(true);
     try{
-    await signup(emailRef.current.value ,passwordRef.current.value);
+    await signup(emailRef.current.value ,passwardRef.current.value);
     }catch{
-      alert("Error");
+      alert("This Email Alrady Exist");
     }
     setLoading(false);
   }
 
+
   return (
-    <div className="main" id="main">
-      <div className="img">
-        <img src='./img/download.png' alt= "logimag" width="100px" />
-      </div>
+    <div  id="main">
+      <div id="sub-main" className="w3-padding-64 w3-panel">
+
+        
+        <div id="imag">
+
+            <img src="./img/AAAA.png" alt= "profile" className="w3-image profile"  />
+
+       </div>
 
       <div className="fields" id="fields">
         <label>Enter Your Name :</label><br/>
-        <input  placeholder="First Name"/><br/><br/>
+        <input  placeholder="First Name"/><br/>
         <label>Enter Email address :</label><br/>
-        <input ref={ emailRef } placeholder="Email"/><br/><br/>
+        <input ref={ emailRef } placeholder="Email"/><br/>
         <label>Enter Passworad :</label><br/>
-        <input ref={ passwordRef } type="password" placeholder="Passworad"/><br/><br/>
+        <input ref={ passwordRef } type="password" placeholder="Passworad"/><br/>
         <label>Gender :</label>
         <select defaultValue="Select Gender">
             <option defaultValue>Select Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-        </select><br /><br/>
+        </select><br />
 
-        <button disabled={loading} onClick={handlesignup}>signup</button>
-      </div>
+        </div>
 
-      
 
+      </div>   
     </div>
   );
-} 
+}
