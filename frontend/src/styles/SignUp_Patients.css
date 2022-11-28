@@ -36,7 +36,9 @@
  .demo{
     display: grid;
     align-items: center; 
-    justify-content: center
+    justify-content: center;
+    
+    
     
 }
 
@@ -113,23 +115,26 @@
 
 .text{
     display: flex;
+    padding-left: 30rem;
 }
 
 .w3-panel1{
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 30rem;
+    height: auto;
+    padding-right: 0;
     background-color: rgb(100, 173, 129);
     display: inline-block;
     justify-content: center;
     box-sizing: border-box;
     border: 3px solid rgb(5, 206, 49);
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .w3-panel1 .demo1{
-    margin: 3rem 3rem 3rem 3rem ;
+    /* margin: 3rem 3rem 3rem 3rem ; */
     width: 50rem;
     display: inline-block;
+    padding-left: 0;
     
 }
 
