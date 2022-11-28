@@ -45,7 +45,7 @@ export default function App() {
     // }
     const formData = new FormData()
     formData.append('file',img)
-    const res  = await fetch('http://127.0.0.1:8000/predict',{
+    const res  = await fetch('https://8000-dmnsangeeth-diagnosisof-m5oxb99fq9h.ws-us77.gitpod.io/predict',{
     method:'POST',
     // headers:headers,
     body:formData
