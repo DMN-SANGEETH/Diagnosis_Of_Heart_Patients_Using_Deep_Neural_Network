@@ -6,3 +6,4 @@ pillow
 tensorflow-serving-api==2.5.0
 numpy
 gunicorn==20.1.0
+opencv-python
