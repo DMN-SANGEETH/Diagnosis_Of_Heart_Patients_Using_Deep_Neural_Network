@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { async } from "@firebase/util";
 import { signup } from "./firebase/firebase";
 import '../styles/Pationentreg.css';
-// import Profile from "./img/AAAA.png";
+
 
 export default function App(){
   const [ loading, setLoading ] = useState(false);

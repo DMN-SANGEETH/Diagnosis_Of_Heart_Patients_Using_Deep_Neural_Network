@@ -1,15 +1,9 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
-// import styled from 'styled-components';
 import auth from './firebase/firebase';
 import {SignJWT} from "jose"
 import Cookies from 'js-cookie'
 import "../styles/login.css";
-// import { BrowserRouter as Router,
-//         Routes,
-//         Route,
-//         Link,
-//  } from 'react-router-dom';
 
 
 
@@ -45,9 +39,7 @@ const Login = () => {
     return (
         
         <div className='container' >              
-        {/* <BlogImage>
-            <img src='./img/images02.jpeg' alt='blogimage' />
-        </BlogImage> */}
+        
             <div className="screen__content">
             
                 <div className="content_1">
@@ -75,10 +67,7 @@ const Login = () => {
                         <div style={{align:'center',margin:'auto'}}>Log in</div>
                     </button>
                     <br/>
-                    {/* <li><Link to="/Patientsreg">React</Link></li> */}
-                    {/* <a href="/Patientsreg" className='patientsreg' >Sign-up</a> */}
-
-                    {/* <a a href='/' className='forgetpw' style={{textDecoration:'none',color:'ButtonHighlight'}}>forget password</a> */}
+                    
                     
                 </div>
             
